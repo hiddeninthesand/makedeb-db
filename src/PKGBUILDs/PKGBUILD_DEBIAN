@@ -9,7 +9,7 @@ pkgrel=2
 pkgdesc="Dependency conversion tool for makedeb"
 arch=("any")
 license=("GPL3")
-url=("https://github.com/hwittenborn/makedeb-db")
+url="https://github.com/hwittenborn/makedeb-db"
 
 source=("makedeb-db.sh"
         "packages.db")

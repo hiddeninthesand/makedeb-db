@@ -7,7 +7,7 @@ pkgrel=2
 pkgdesc="Dependency conversion tool for makedeb"
 arch=("any")
 license=("GPL3")
-url=("https://github.com/hwittenborn/makedeb-db")
+url="https://github.com/hwittenborn/makedeb-db"
 
 source=("https://repo.hunterwittenborn.com/debian/makedeb/pool/m/makedeb-db/makedeb-db_${pkgver}-${pkgrel}_all.deb")
 sha256sums=("SKIP")
