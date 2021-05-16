@@ -41,7 +41,7 @@ query_check() {
 }
 
 run_package() {
-  pkginfo=$(cat packages.db | sed 's|$|;|g' | xargs | grep -o "${pkg}() {.*}" | sed 's|;|\n|g')
+  pkginfo=$(cat "${database_dir}"/packages.db | sed 's|$|;|g' | xargs | grep -o "${pkg}() {.*}" | sed 's|;|\n|g')
   source <(echo "${pkginfo}")
   if [[ $(type -t "${pkg}") == "function" ]]; then
     "${pkg}"
@@ -67,7 +67,7 @@ run_general() {
   # 4. Remove Everything up to beginning of general dependencies listing
   # 5. Replace semicolons(;) with newlines
   # 6. Add "export" to beggining of each line
-  db_info=$(cat packages.db | sed 's|$|;|g' | xargs | sed 's|[^:].*# General dependencies; ||' | sed 's|;|\n|g')
+  db_info=$(cat "${database_dir}"/packages.db | sed 's|$|;|g' | xargs | sed 's|[^:].*# General dependencies; ||' | sed 's|;|\n|g')
 
   # Convert package arguments from arg_check() into format for 'grep'
   new_pkg=$(echo "${pkg}" | sed 's| |\n|g' | sed 's|$|=;|g' | xargs | sed 's|;| |g' | sed 's|  | |g' | sed 's| |\||g' | rev | sed 's|\|||' | rev)
