@@ -9,6 +9,7 @@ apt install sudo wget -y
 # Set up PKGBUILD
 echo "+ Setting up PKGBUILD"
 scripts/pkgbuild_gen.sh
+cp src/PKGBUILDs/PKGBUILD_DEBIAN src/PKGBUILD
 
 # Set up repository and install current copy of makedeb
 echo "+ Setting up repository"
