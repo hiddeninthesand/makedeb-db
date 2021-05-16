@@ -124,7 +124,7 @@ steps:
 - name: Replace AUR PKGBUILD with PKGBUILD from GitHub
   image: ubuntu
   commands:
-  - makedeb/scripts/aur_pkgbuild_select.sh
+  - makedeb-db/scripts/aur_pkgbuild_select.sh
 
 - name: Push Release to AUR
   image: docker.hunterwittenborn.com/hwittenborn/drone-aur
