@@ -25,4 +25,4 @@ chmod a+rwx src -R
 
 echo "+ Building makedeb-db with makedeb"
 cd src
-sudo -u nobody makedeb.sh
+sudo -u nobody makedeb
