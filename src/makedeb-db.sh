@@ -49,7 +49,7 @@ run_package() {
     exit 0
   fi
 
-  variables="add_depends add_optdepends add_conflicts add_makedepends add_checkdepends remove_depends remove_optdepends remove_conflicts remove_makedepends remove_checkdepends"
+  variables="arch_packages add_depends add_optdepends add_conflicts add_makedepends add_checkdepends remove_depends remove_optdepends remove_conflicts remove_makedepends remove_checkdepends"
   for i in ${variables}; do
     if [[ $(eval echo \${${i}}) != "" ]]; then
       output+=" \"${i}\": \"$(eval echo \${${i}})\","
