@@ -4,6 +4,11 @@
 # dependencies in the PKGBUILD.
 ##
 #
+
+atom() {
+  arch_packages=('apm')
+}
+
 yq() {
   add_depends=('python-is-python3')
   add_makedepends=('python-is-python3')
