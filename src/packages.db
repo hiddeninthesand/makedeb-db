@@ -6,7 +6,7 @@
 #
 
 atom() {
-  arch_packages=('apm')
+  arch_packages=('apm' 'electron9')
 }
 
 yq() {
@@ -17,15 +17,20 @@ yq() {
 # General dependencies
 alsa-lib="libasound2"
 awk="mawk"
+c-ares="libc-ares2"
 glibc="libc6"
 go="golang-go"
 gtk3="libgtk-3-0"
 gtk-engine-murrine="gtk2-engines-murrine"
 gtk-engines="gtk2-engines"
+http-parser="libhttp-parser2.9"
 libarchive="libarchive-tools"
 libcups="libcups2"
+libevent="libevent-2.1-7"
+libnghttp2="libnghttp2-14"
 libnotify="libnotify-bin"
 libsecret="libsecret-common"
+libxslt="libxslt1.1"
 libxss="libxss1"
 libxtst="libxtst6"
 mailcap="mime-support"
@@ -36,3 +41,5 @@ python-argcomplete="python3-argcomplete"
 python-toml="python3-toml"
 python-xmltodict="python3-xmltodict"
 python-yaml="python3-yaml"
+re2="libre2-5"
+snappy="libsnappy1v5"
