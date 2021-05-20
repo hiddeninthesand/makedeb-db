@@ -9,6 +9,10 @@ atom() {
   arch_packages=('apm' 'electron9')
 }
 
+electron9() {
+  arch_packages=('icu' 'libwebp')
+}
+
 yq() {
   add_depends=('python-is-python3')
   add_makedepends=('python-is-python3')
@@ -18,6 +22,8 @@ yq() {
 alsa-lib="libasound2"
 awk="mawk"
 c-ares="libc-ares2"
+gcc-libs="gcc"
+giflib="libgif7"
 glibc="libc6"
 go="golang-go"
 gtk3="libgtk-3-0"
@@ -27,9 +33,12 @@ http-parser="libhttp-parser2.9"
 libarchive="libarchive-tools"
 libcups="libcups2"
 libevent="libevent-2.1-7"
+libjpeg="libjpeg-turbo8"
 libnghttp2="libnghttp2-14"
 libnotify="libnotify-bin"
+libpng="libpng16-16"
 libsecret="libsecret-common"
+libtiff="libtiff5"
 libxkbfile="libxkbfile1"
 libxslt="libxslt1.1"
 libxss="libxss1"
@@ -43,4 +52,5 @@ python-toml="python3-toml"
 python-xmltodict="python3-xmltodict"
 python-yaml="python3-yaml"
 re2="libre2-5"
+sh="bash"
 snappy="libsnappy1v5"
