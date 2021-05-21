@@ -15,6 +15,10 @@ electron9() {
   add_depends=('icu' 'libwebp')
 }
 
+element_desktop() {
+  arch_packages=('element-web')
+}
+
 yq() {
   add_depends=('python-is-python3')
   add_makedepends=('python-is-python3')
