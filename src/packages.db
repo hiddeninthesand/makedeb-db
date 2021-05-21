@@ -7,10 +7,12 @@
 
 atom() {
   arch_packages=('apm' 'electron9')
+  add_conflicts=('atom')
 }
 
 electron9() {
   arch_packages=('icu' 'libwebp')
+  add_depends=('icu' 'libwebp')
 }
 
 yq() {
@@ -22,10 +24,13 @@ yq() {
 alsa-lib="libasound2"
 awk="mawk"
 c-ares="libc-ares2"
+freetype2="libfreetype6"
 gcc-libs="gcc"
 giflib="libgif7"
+glib2="libglib2.0-data"
 glibc="libc6"
 go="golang-go"
+graphite="graphite-web"
 gtk3="libgtk-3-0"
 gtk-engine-murrine="gtk2-engines-murrine"
 gtk-engines="gtk2-engines"
