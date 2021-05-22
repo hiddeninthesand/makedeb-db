@@ -19,6 +19,11 @@ element_desktop() {
   arch_packages=('element-web')
 }
 
+unexicon_sound_theme_git() {
+  remove_makedepends=('pkgconfig')
+  add_makedepends=('libpkgconf')
+}
+
 yq() {
   add_depends=('python-is-python3')
   add_makedepends=('python-is-python3')
