@@ -6,13 +6,15 @@ database_dir="./"
 
 ## Functions ##
 arg_check() {
-  while true; do
+  while [[ "${1}" != "" ]]; do
     case "${1}" in
-      "" | "-h" | "--help")                      help; exit 0 ;;
-      --package | -P)                         query="package"; shift 1; pkg="${@}"; break ;;
-      --general | -G)                         query="general"; shift 1; pkg="${@}"; break ;;
-      *)                                         echo "Invalid option '${1}'"; exit 1 ;;
+      "" | "-h" | "--help")    help; exit 0 ;;
+      --package | -P)          query="package" ;;
+      --general | -G)          query="general" ;;
+      *)                       pkg="${1}" ;;
+      -*)                      echo "Unknown option '${1}'"; exit 1 ;;
     esac
+    shift 1
   done
 }
 
@@ -89,4 +91,5 @@ run_general() {
 }
 ## Begin script ##
 arg_check "${@}"
+pkg=$(echo ${pkg} | sed 's|-|_|g')
 query_check
