@@ -6,17 +6,17 @@
 #
 
 atom() {
-  arch_depends=('apm' 'electron9')
+  arch_packages=('apm' 'electron9')
   add_conflicts=('atom')
 }
 
 electron9() {
-  arch_depends=('icu' 'libwebp')
+  arch_packages=('icu' 'libwebp')
   add_depends=('icu' 'libwebp')
 }
 
 element_desktop() {
-  arch_depends=('element-web')
+  arch_packages=('element-web')
 }
 
 protonvpn_linux_gui() {
