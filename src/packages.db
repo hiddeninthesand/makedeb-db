@@ -6,17 +6,22 @@
 #
 
 atom() {
-  arch_packages=('apm' 'electron9')
+  arch_depends=('apm' 'electron9')
   add_conflicts=('atom')
 }
 
 electron9() {
-  arch_packages=('icu' 'libwebp')
+  arch_depends=('icu' 'libwebp')
   add_depends=('icu' 'libwebp')
 }
 
 element_desktop() {
-  arch_packages=('element-web')
+  arch_depends=('element-web')
+}
+
+protonvpn_linux_gui() {
+  add_depends=('python-is-python3')
+  add_makedepends=('python-is-python3')
 }
 
 unexicon_sound_theme_git() {
