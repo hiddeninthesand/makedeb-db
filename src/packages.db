@@ -1,75 +1,76 @@
 #!/usr/bin/env bash
 ##
-# Package-specific dependencies. These get added to the list of preexisting
+# Package__specific dependencies. These get added to the list of preexisting
 # dependencies in the PKGBUILD.
 ##
 #
 
 atom() {
-  arch_packages=('apm' 'electron9')
-  add_conflicts=('atom')
+  arch__packages=('apm' 'electron9')
+  add__conflicts=('atom')
 }
 
 electron9() {
-  arch_packages=('icu' 'libwebp')
-  add_depends=('icu' 'libwebp')
+  arch__packages=('icu' 'libwebp')
+  add__depends=('icu' 'libwebp')
 }
 
-element_desktop() {
-  arch_packages=('element-web')
+element__desktop() {
+  arch__packages=('element__web')
 }
 
-protonvpn_linux_gui() {
-  add_depends=('python-is-python3')
-  add_makedepends=('python-is-python3')
+protonvpn__linux__gui() {
+  add__depends=('python__is__python3')
+  add__makedepends=('python__is__python3')
 }
 
-unexicon_sound_theme_git() {
-  remove_makedepends=('pkgconfig')
-  add_makedepends=('libpkgconf')
+unexicon__sound__theme__git() {
+  remove__makedepends=('pkgconfig')
+  add__makedepends=('libpkgconf')
 }
 
 yq() {
-  add_depends=('python-is-python3')
-  add_makedepends=('python-is-python3')
+  add__depends=('python__is__python3')
+  add__makedepends=('python__is__python3')
 }
 
 # General dependencies
-alsa-lib="libasound2"
+alsa__lib="libasound2"
 awk="mawk"
-c-ares="libc-ares2"
+c__ares="libc__ares2"
 freetype2="libfreetype6"
-gcc-libs="gcc"
+gcc__libs="gcc"
 giflib="libgif7"
-glib2="libglib2.0-data"
+glib2="libglib2.0__data"
 glibc="libc6"
-go="golang-go"
-graphite="graphite-web"
-gtk3="libgtk-3-0"
-gtk-engine-murrine="gtk2-engines-murrine"
-gtk-engines="gtk2-engines"
-http-parser="libhttp-parser2.9"
-libarchive="libarchive-tools"
+go="golang__go"
+graphite="graphite__web"
+gtk3="libgtk__3__0"
+gtk__engine__murrine="gtk2__engines__murrine"
+gtk__engines="gtk2__engines"
+http__parser="libhttp__parser2.9"
+libappindicator__gtk3="libappindicator3__1"
+libarchive="libarchive__tools"
 libcups="libcups2"
-libevent="libevent-2.1-7"
-libjpeg="libjpeg-turbo8"
-libnghttp2="libnghttp2-14"
-libnotify="libnotify-bin"
-libpng="libpng16-16"
-libsecret="libsecret-common"
+libevent="libevent__2.1__7"
+libjpeg="libjpeg__turbo8"
+libnghttp2="libnghttp2__14"
+libnotify="libnotify__bin"
+libpng="libpng16__16"
+libsecret="libsecret__common"
 libtiff="libtiff5"
 libxkbfile="libxkbfile1"
 libxslt="libxslt1.1"
 libxss="libxss1"
 libxtst="libxtst6"
-mailcap="mime-support"
+mailcap="mime__support"
 nspr="libnspr4"
 nss="libnss3"
 python="python3"
-python-argcomplete="python3-argcomplete"
-python-toml="python3-toml"
-python-xmltodict="python3-xmltodict"
-python-yaml="python3-yaml"
-re2="libre2-5"
+python__argcomplete="python3__argcomplete"
+python__toml="python3__toml"
+python__xmltodict="python3__xmltodict"
+python__yaml="python3__yaml"
+re2="libre2__5"
 sh="bash"
 snappy="libsnappy1v5"
