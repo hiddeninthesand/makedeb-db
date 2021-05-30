@@ -11,8 +11,8 @@ arg_check() {
       "" | "-h" | "--help")    help; exit 0 ;;
       --package | -P)          query="package" ;;
       --general | -G)          query="general" ;;
-      *)                       pkg="${1}" ;;
       -*)                      echo "Unknown option '${1}'"; exit 1 ;;
+      *)                       pkg+=" ${1}" ;;
     esac
     shift 1
   done
@@ -58,7 +58,7 @@ run_package() {
     fi
   done
 
-  new_output=$(echo ${output} | rev | sed 's|,||' | rev)
+  new_output=$(echo ${output} | rev | sed 's|,||' | rev | sed 's|__|-|g')
   printf "{ ${new_output} }\n"
 }
 
@@ -85,11 +85,11 @@ run_general() {
   done
 
   if [[ "${output}" != "" ]]; then
-    new_output=$(echo ${output} | rev | sed 's|,||' | rev)
+    new_output=$(echo ${output} | rev | sed 's|,||' | rev | sed 's|__|-|g')
     printf "{ ${new_output} }\n"
   fi
 }
 ## Begin script ##
 arg_check "${@}"
-pkg=$(echo ${pkg} | sed 's|-|_|g')
+pkg=$(echo ${pkg} | sed 's|-|__|g' | xargs)
 query_check
