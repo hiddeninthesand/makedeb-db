@@ -6,32 +6,36 @@
 #
 
 atom() {
-  arch_packages=('apm' 'electron9')
-  add_conflicts=('atom')
+    arch_packages=('apm' 'electron9')
+    add_conflicts=('atom')
 }
 
 electron9() {
-  arch_packages=('icu' 'libwebp')
-  add_depends=('icu' 'libwebp')
+    arch_packages=('icu' 'libwebp')
+    add_depends=('icu' 'libwebp')
 }
 
 element__desktop() {
-  arch_packages=('element__web')
+    arch_packages=('element__web')
+}
+
+element__web() {
+    arch_packages=('electron' 'nodejs__lts__fermium')
 }
 
 protonvpn__linux__gui() {
-  add_depends=('python__is__python3')
-  add_makedepends=('python__is__python3')
+    add_depends=('python__is__python3')
+    add_makedepends=('python__is__python3')
 }
 
 unexicon__sound__theme__git() {
-  remove_makedepends=('pkgconfig')
-  add_makedepends=('libpkgconf')
+    remove_makedepends=('pkgconfig')
+    add_makedepends=('libpkgconf')
 }
 
 yq() {
-  add_depends=('python__is__python3')
-  add_makedepends=('python__is__python3')
+    add_depends=('python__is__python3')
+    add_makedepends=('python__is__python3')
 }
 
 # General dependencies
@@ -49,16 +53,18 @@ gtk3="libgtk__3__0"
 gtk__engine__murrine="gtk2__engines__murrine"
 gtk__engines="gtk2__engines"
 http__parser="libhttp__parser2.9"
+icu="libicu__dev"
 libappindicator__gtk3="libappindicator3__1"
 libarchive="libarchive__tools"
 libcups="libcups2"
 libevent="libevent__2.1__7"
 libjpeg="libjpeg__turbo8"
-libnghttp2="libnghttp2__14"
+libnghttp2="libnghttp2__dev"
 libnotify="libnotify__bin"
 libpng="libpng16__16"
 libsecret="libsecret__common"
 libtiff="libtiff5"
+libuv="libuv1"
 libxkbfile="libxkbfile1"
 libxslt="libxslt1.1"
 libxss="libxss1"
@@ -66,11 +72,15 @@ libxtst="libxtst6"
 mailcap="mime__support"
 nspr="libnspr4"
 nss="libnss3"
+procps__ng="libprocps8"
 python="python3"
 python__argcomplete="python3__argcomplete"
 python__toml="python3__toml"
 python__xmltodict="python3__xmltodict"
 python__yaml="python3__yaml"
 re2="libre2__5"
+rust="rustc"
 sh="bash"
 snappy="libsnappy1v5"
+yarn="yarnpkg"
+zlib="zlib1g__dev"
