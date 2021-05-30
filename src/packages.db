@@ -10,6 +10,10 @@ atom() {
     add_conflicts=('atom')
 }
 
+electron() {
+    arch_packages=('gn__m87')
+}
+
 electron9() {
     arch_packages=('icu' 'libwebp')
     add_depends=('icu' 'libwebp')
@@ -39,10 +43,17 @@ yq() {
 }
 
 # General dependencies
+# A
 alsa__lib="libasound2"
 awk="mawk"
+
+# C
 c__ares="libc__ares2"
+
+# F
 freetype2="libfreetype6"
+
+# G
 gcc__libs="gcc"
 giflib="libgif7"
 glib2="libglib2.0__data"
@@ -52,8 +63,19 @@ graphite="graphite__web"
 gtk3="libgtk__3__0"
 gtk__engine__murrine="gtk2__engines__murrine"
 gtk__engines="gtk2__engines"
+
+# H
+harfbuzz__icu="libharfbuzz__dev"
 http__parser="libhttp__parser2.9"
+
+# I
 icu="libicu__dev"
+
+# J
+java__runtime__headless="default__jre"
+jsoncpp="libjsoncpp-dev"
+
+# L
 libappindicator__gtk3="libappindicator3__1"
 libarchive="libarchive__tools"
 libcups="libcups2"
@@ -69,18 +91,33 @@ libxkbfile="libxkbfile1"
 libxslt="libxslt1.1"
 libxss="libxss1"
 libxtst="libxtst6"
+
+# M
 mailcap="mime__support"
+
+# N
+ninja="ninja__build"
 nspr="libnspr4"
 nss="libnss3"
+
+# P
 procps__ng="libprocps8"
 python="python3"
 python__argcomplete="python3__argcomplete"
 python__toml="python3__toml"
 python__xmltodict="python3__xmltodict"
 python__yaml="python3__yaml"
+
+# R
 re2="libre2__5"
 rust="rustc"
+
+# S
 sh="bash"
 snappy="libsnappy1v5"
+
+# Y
 yarn="yarnpkg"
+
+# Z
 zlib="zlib1g__dev"
