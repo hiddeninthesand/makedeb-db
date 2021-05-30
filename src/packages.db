@@ -6,32 +6,32 @@
 #
 
 atom() {
-  arch__packages=('apm' 'electron9')
-  add__conflicts=('atom')
+  arch_packages=('apm' 'electron9')
+  add_conflicts=('atom')
 }
 
 electron9() {
-  arch__packages=('icu' 'libwebp')
-  add__depends=('icu' 'libwebp')
+  arch_packages=('icu' 'libwebp')
+  add_depends=('icu' 'libwebp')
 }
 
 element__desktop() {
-  arch__packages=('element__web')
+  arch_packages=('element__web')
 }
 
 protonvpn__linux__gui() {
-  add__depends=('python__is__python3')
-  add__makedepends=('python__is__python3')
+  add_depends=('python__is__python3')
+  add_makedepends=('python__is__python3')
 }
 
 unexicon__sound__theme__git() {
-  remove__makedepends=('pkgconfig')
-  add__makedepends=('libpkgconf')
+  remove_makedepends=('pkgconfig')
+  add_makedepends=('libpkgconf')
 }
 
 yq() {
-  add__depends=('python__is__python3')
-  add__makedepends=('python__is__python3')
+  add_depends=('python__is__python3')
+  add_makedepends=('python__is__python3')
 }
 
 # General dependencies
