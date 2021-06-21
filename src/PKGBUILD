@@ -1,2 +1,27 @@
-pkgver=4.1.0
+# Maintainer: Hunter Wittenborn <hunter@hunterwittenborn.com>
+
+pkgname=makedeb-db
+pkgver=4.1.1
 pkgrel=1
+pkgdesc="Dependency conversion tool for makedeb"
+arch=("any")
+license=("GPL3")
+url="https://github.com/hwittenborn/makedeb-db"
+
+source=("makedeb-db.sh"
+        "packages.db")
+sha256sums=("SKIP"
+            "SKIP")
+
+package() {
+  # Copy CLI program
+  mkdir -p "${pkgdir}"/usr/bin/
+  cp "${srcdir}"/makedeb-db.sh "${pkgdir}"/usr/bin/makedeb-db
+
+  # Configure database directory
+  sed -i 's|database_dir=.*|database_dir=/usr/lib/makedeb-db/|' "${pkgdir}"/usr/bin/makedeb-db
+
+  # Copy database file
+  mkdir -p "${pkgdir}"/usr/lib/makedeb-db/
+  cp "${srcdir}"/packages.db "${pkgdir}"/usr/lib/makedeb-db/packages.db
+}
