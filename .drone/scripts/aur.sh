@@ -17,7 +17,7 @@ aur_configure() {
     sed -i "s|pkgrel=.*|pkgrel=${pkgbuild_pkgrel}|" "makedeb-db_aur/PKGBUILD"
 
     chown 'user:user' "makedeb-db_aur" -R
-    cd "${package_name}"
+    cd "makedeb-db_aur"
     sudo -u user makepkg --printsrcinfo | tee .SRCINFO
 }
 
