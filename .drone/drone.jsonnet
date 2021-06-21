@@ -17,7 +17,7 @@
             commands: [".drone/scripts/publish.sh"]
         }
     ]
-},
+};
 
 {
     name: "aur-publish",
