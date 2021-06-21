@@ -1,4 +1,4 @@
-{
+local buildAndPublish() = {
     name: "build-and-publish",
     kind: "pipeline",
     type: "docker",
@@ -16,9 +16,9 @@
             commands: [".drone/scripts/publish.sh"]
         }
     ]
-}
+};
 
-{
+local aurPublish() = {
     name: "aur-publish",
     kind: "pipeline",
     type: "docker",
@@ -52,3 +52,8 @@
         }
     ]
 };
+
+[
+  buildAndPublish(),
+  aurPublish(),
+]
