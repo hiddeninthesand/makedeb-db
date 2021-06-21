@@ -2,7 +2,6 @@
     name: "build-and-publish",
     kind: "pipeline",
     type: "docker",
-    trigger: {branch: [a]},
     steps: [
         {
             name: "build-debian-package",
@@ -24,7 +23,6 @@
     kind: "pipeline",
     type: "docker",
     volumes: [{name: "aur", temp: {}}],
-    trigger: {branch: [b]},
     depends_on: ["build-and-publish"],
 
     steps: [
