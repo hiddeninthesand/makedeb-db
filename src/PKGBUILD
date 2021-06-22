@@ -1,7 +1,7 @@
 # Maintainer: Hunter Wittenborn <hunter@hunterwittenborn.com>
 
 pkgname=makedeb-db
-pkgver=4.1.3
+pkgver=4.1.4
 pkgrel=1
 pkgdesc="Dependency conversion tool for makedeb"
 arch=("any")
@@ -15,11 +15,11 @@ sha256sums=("SKIP"
 
 package() {
   # Copy CLI program
-  install -dm 555 "${srcdir}"/makedeb-db.sh "${pkgdir}"/usr/bin/makedeb-db
+  install -Dm 555 "${srcdir}/makedeb-db.sh" "${pkgdir}/usr/bin/makedeb-db"
 
   # Configure database directory
-  sed -i 's|database_dir=.*|database_dir=/usr/share/makedeb-db/|' "${pkgdir}"/usr/bin/makedeb-db
+  sed -i 's|database_dir=.*|database_dir=/usr/share/makedeb-db/|' "${pkgdir}/usr/bin/makedeb-db"
 
   # Copy database file
-  install -dm 444 "${srcdir}"/packages.db "${pkgdir}"/usr/share/makedeb-db/packages.db
+  install -Dm 444 "${srcdir}/packages.db" "${pkgdir}/usr/share/makedeb-db/packages.db"
 }
