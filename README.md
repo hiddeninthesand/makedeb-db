@@ -1,3 +1,6 @@
+## **DEPRECATION NOTICE** ##
+As mpm (the primary use for this tool) is migrating over to use the DUR, this project no longer serves a general purpose for me, and will thus no longer be maintained.
+
 ## Overview ##
 makedeb-db converts Arch Linux dependency names to their Debian counterparts.
 
